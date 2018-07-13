@@ -21,7 +21,7 @@
     <div class="card card-login mx-auto mt-5">
       <div class="card-header" align="center">SIMBETA Login</div>
       <div class="card-body">
-        <form method="post" action="proses_login.php">
+        <form method="post" action=" <?php echo base_url("login/proses_login")?> ">
           <div class="form-group">
             <label for="exampleInputEmail1">Username</label>
             <input class="form-control" id="exampleInputEmail1" type="text" placeholder="Username" name="username">

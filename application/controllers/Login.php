@@ -3,23 +3,42 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Login extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
 	public function index()
 	{
 		$this->load->view('login');
+	}
+
+	public function proses_login()
+	{
+
+		$username=$this->input->post("username");
+		$password=$this->input->post("password");
+		// echo $username;
+		// echo $password;
+
+		$this->db->select();
+		$this->db->from('login');
+		$this->db->where('username', $username);
+		$this->db->where('password', $password);
+		$query = $this->db->get()->num_rows(); 
+		// echo json_encode($query->num_rows());
+
+		if ($query > 0) {
+			echo "hi";
+			$query = $this->db->get('login'); 
+			echo json_encode($query->result());
+			foreach ($query->result() as $row)
+			{
+				
+			}
+		}else{
+			echo ":p";
+		}
+
+		// $query = $this->db->get('login'); 
+		// echo json_encode($query->result());
+		// foreach ($query->result() as $row)
+		// {
+		// }
 	}
 }
