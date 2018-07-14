@@ -13,32 +13,32 @@ class Login extends CI_Controller {
 
 		$username=$this->input->post("username");
 		$password=$this->input->post("password");
-		// echo $username;
-		// echo $password;
 
 		$this->db->select();
 		$this->db->from('login');
 		$this->db->where('username', $username);
 		$this->db->where('password', $password);
-		$query = $this->db->get()->num_rows(); 
+		$query = $this->db->get();
+		$num = $query->num_rows(); 
 		// echo json_encode($query->num_rows());
 
-		if ($query > 0) {
-			echo "hi";
-			$query = $this->db->get('login'); 
-			echo json_encode($query->result());
+		if ($num > 0) {
+			// echo "hi";
+			// $query = $this->db->get('login'); 
+			// echo json_encode($query->result());
 			foreach ($query->result() as $row)
 			{
-				
+				$akun = array(
+					'username'  => $row->username,
+					'akses'     => $row->akses,
+					'logged_in' => TRUE
+				);
+				$this->session->set_userdata($akun);
+				redirect('/beranda/');
+				var_dump($akun);
 			}
 		}else{
 			echo ":p";
 		}
-
-		// $query = $this->db->get('login'); 
-		// echo json_encode($query->result());
-		// foreach ($query->result() as $row)
-		// {
-		// }
 	}
 }

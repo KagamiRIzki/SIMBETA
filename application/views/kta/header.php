@@ -9,13 +9,13 @@
   <meta name="author" content="">
   <title>SIMBETA</title>
   <!-- Bootstrap core CSS-->
-  <link href="http://localhost/SIMBETA/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="<?php echo base_url('assets/vendor/bootstrap/css/bootstrap.min.css');?>" rel="stylesheet">
   <!-- Custom fonts for this template-->
-  <link href="http://localhost/SIMBETA/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="<?php echo base_url('assets/vendor/font-awesome/css/font-awesome.min.css');?>" rel="stylesheet" type="text/css">
   <!-- Page level plugin CSS-->
-  <link href="http://localhost/SIMBETA/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+  <link href="<?php echo base_url('assets/vendor/datatables/dataTables.bootstrap4.css');?>" rel="stylesheet">
   <!-- Custom styles for this template-->
-  <link href="http://localhost/SIMBETA/css/sb-admin.css" rel="stylesheet">
+  <link href="<?php echo base_url('assets/css/sb-admin.css');?>" rel="stylesheet">
   <!-- combo box source -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
 </head>
@@ -113,7 +113,7 @@
             <h6 class="dropdown-header">New Alerts:</h6>
             
           <?php
-          include 'time_notif.php';
+          // include 'time_notif.php';
           ?>
             <a class="dropdown-item small" href="#">View all alerts</a>
           </div>

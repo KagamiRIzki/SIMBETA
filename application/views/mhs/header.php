@@ -9,13 +9,13 @@
   <meta name="author" content="">
   <title>SIMBETA</title>
   <!-- Bootstrap core CSS-->
-  <link href="http://localhost/SIMBETA/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="<?php echo base_url('assets/vendor/bootstrap/css/bootstrap.min.css');?>" rel="stylesheet">
   <!-- Custom fonts for this template-->
-  <link href="http://localhost/SIMBETA/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="<?php echo base_url('assets/vendor/font-awesome/css/font-awesome.min.css');?>" rel="stylesheet" type="text/css">
   <!-- Page level plugin CSS-->
-  <link href="http://localhost/SIMBETA/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+  <link href="<?php echo base_url('assets/vendor/datatables/dataTables.bootstrap4.css');?>" rel="stylesheet">
   <!-- Custom styles for this template-->
-  <link href="http://localhost/SIMBETA/css/sb-admin.css" rel="stylesheet">
+  <link href="<?php echo base_url('assets/css/sb-admin.css');?>" rel="stylesheet">
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">

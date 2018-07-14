@@ -9,13 +9,13 @@
   <meta name="author" content="">
   <title>SIMBETA</title>
   <!-- Bootstrap core CSS-->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="<?php echo base_url('assets/vendor/bootstrap/css/bootstrap.min.css');?>" rel="stylesheet">
   <!-- Custom fonts for this template-->
-  <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="<?php echo base_url('assets/vendor/font-awesome/css/font-awesome.min.css');?>" rel="stylesheet" type="text/css">
   <!-- Page level plugin CSS-->
-  <link href="assets/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+  <link href="<?php echo base_url('assets/vendor/datatables/dataTables.bootstrap4.css');?>" rel="stylesheet">
   <!-- Custom styles for this template-->
-  <link href="assets/css/sb-admin.css" rel="stylesheet">
+  <link href="<?php echo base_url('assets/css/sb-admin.css');?>" rel="stylesheet">
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
@@ -104,7 +104,7 @@
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
             <h6 class="dropdown-header">New Alerts:</h6>
             <?php
-            include 'time_notif.php';
+            // include 'time_notif.php';
             ?>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item small" href="#">View all alerts</a>
