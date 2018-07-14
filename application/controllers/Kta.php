@@ -10,5 +10,13 @@ class Kta extends CI_Controller {
 		$this->load->view('kta/beranda');
 		$this->load->view('kta/footer');
 	}
+	public function tabel_kta()
+	{	
+		$data['data_kta']=$this->db->get('kta');
 
+		$this->load->view('kta/header');
+		$this->load->view('kta/tabel_kta',$data);
+		$this->load->view('kta/footer');
+		// echo "mahasiswa";
+	}
 }

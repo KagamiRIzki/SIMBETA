@@ -76,16 +76,16 @@
           </a>
           <ul class="sidenav-second-level collapse" id="3">
             <li>
-              <a href="lihat_tabel_user.php">Tabel User</a>
+              <a href="<?php echo base_url('login/tabel_user');?>">Tabel User</a>
             </li>
             <li>
               <a href="<?php echo base_url('dosen/tabel_dosen');?>">Tabel Dosen</a>
             </li>
             <li>
-              <a href="lihat_tabel_mhs.php">Tabel Mahasiswa</a>
+              <a href="<?php echo base_url('mahasiswa/tabel_mahasiswa');?>">Tabel Mahasiswa</a>
             </li>
             <li>
-              <a href="lihat_tabel_kta.php">Tabel KTA</a>
+              <a href="<?php echo base_url('kta/tabel_kta');?>">Tabel KTA</a>
             </li>
           </ul>
         </li>

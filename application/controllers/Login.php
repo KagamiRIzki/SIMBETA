@@ -41,4 +41,12 @@ class Login extends CI_Controller {
 			echo ":p";
 		}
 	}
+	public function tabel_user()
+	{
+		$data['data_user']=$this->db->get('login');
+		// echo "tabel dosen";
+		$this->load->view('kta/header');
+		$this->load->view('kta/tabel_user', $data);
+		$this->load->view('kta/footer');
+	}
 }

@@ -13,10 +13,19 @@ class Dosen extends CI_Controller {
 	// olah data dosen
 	public function tabel_dosen()
 	{
-		echo "tabel dosen";
+		
+		$data['data_dosen']=$this->db->get('dosen');
+		// echo "tabel dosen";
 		$this->load->view('kta/header');
-		$this->load->view('dosen/tabel_dosen');
+		$this->load->view('dosen/tabel_dosen', $data);
 		$this->load->view('kta/footer');
+		
+		// foreach ($data['data_dosen']->result() as $row)
+		// {
+        // 	echo $row->nidn;
+		// }
+		// $this->db->select();
+		// $this->db->from('dosen');
 	}
 
 	public function delete_dosen()

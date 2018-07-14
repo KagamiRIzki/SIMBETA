@@ -38,54 +38,42 @@
                 </tr>
               </tfoot>
               <tbody>
-                <?php
-                //   error_reporting(0);
-
-                //   $panggil="SELECT * from dosen" ;
-
-                //   $hasil=mysql_query($panggil);
-
-                //   while ($tampil=mysql_fetch_array($hasil)){
-                //   $nidn=$tampil['nidn'];
-                //   $nama_dsn=$tampil['nama_dsn'];
-                //   $jk=$tampil['jk'];
-                //   $email=$tampil['email'];
-                //   $no_telp=$tampil['no_telp'];
-
-                //   echo "<tr>
-                //   <td>$nidn</td>
-                //   <td>$nama_dsn</td>
-                //   <td>$jk</td>
-                //   <td>$email</td>
-                //   <td>$no_telp</td>
-                //   <td><a type='button' class='btn btn-secondary' href='update_dsn.php?nidn=$nidn'> Update </a></td>
-                //   <td>
-                //   <button type='button' class='btn btn-primary' data-toggle='modal' data-target='#delete-$nidn'>
-                //   Delete
-                //   </button>
+                <?php foreach($data_dosen->result() as $dt_dosen): ?>
+                <tr>
+                  <td><?php echo $dt_dosen->nidn; ?></td>
+                  <td><?php echo $dt_dosen->nama_dsn; ?></td>
+                  <td><?php echo $dt_dosen->jk; ?></td>
+                  <td><?php echo $dt_dosen->email; ?></td>
+                  <td><?php echo $dt_dosen->no_telp; ?></td>
+                  <td><a type='button' class='btn btn-secondary' href='<?php echo $dt_dosen->nidn; ?>'> Update </a></td>
+                  <td>
+                  <button type='button' class='btn btn-primary' data-toggle='modal' data-target='#delete-$nidn'>
+                  Delete
+                  </button>
                       
-                //   <!-- Delete Modal -->
-                //   <div class='modal fade' id='delete-$nidn' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>
-                //   <div class='modal-dialog' role='document'>
-                //     <div class='modal-content'>
-                //       <div class='modal-header'>
-                //         <h5 class='modal-title' id='exampleModalLabel'>Yakin Ingin Menghapus</h5>
-                //         <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
-                //           <span aria-hidden='true'>&times;</span>
-                //         </button>
-                //       </div>
-                //       <div class='modal-body'>
-                //         Pilih 'Delete' jika ingin menghapus data '$nidn'
-                //       </div>
-                //       <div class='modal-footer'>
-                //         <button type='button' class='btn btn-secondary' data-dismiss='modal'>Cancel</button>
-                //         <a class='btn btn-primary' href='delet_dsn.php?nidn=$nidn'>Delete </a>
-                //       </div>
-                //     </div>
-                //   </div>
-                //   </div></td>  </tr>";
-                //   }
-                  ?>
+                  <!-- Delete Modal -->
+                  <div class='modal fade' id='delete-$nidn' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+                  <div class='modal-dialog' role='document'>
+                    <div class='modal-content'>
+                      <div class='modal-header'>
+                        <h5 class='modal-title' id='exampleModalLabel'>Yakin Ingin Menghapus</h5>
+                        <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
+                          <span aria-hidden='true'>&times;</span>
+                        </button>
+                      </div>
+                      <div class='modal-body'>
+                        Pilih 'Delete' jika ingin menghapus data <?php echo $dt_dosen->nidn; ?>
+                      </div>
+                      <div class='modal-footer'>
+                        <button type='button' class='btn btn-secondary' data-dismiss='modal'>Cancel</button>
+                        <a class='btn btn-primary' href='<?php echo $dt_dosen->nidn; ?>'>Delete </a>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  </td>  
+                </tr>
+                <?php endforeach; ?>
               </tbody>
             </table>
           </div>
