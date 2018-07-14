@@ -79,7 +79,7 @@
               <a href="lihat_tabel_user.php">Tabel User</a>
             </li>
             <li>
-              <a href="lihat_tabel_dsn.php">Tabel Dosen</a>
+              <a href="<?php echo base_url('dosen/tabel_dosen');?>">Tabel Dosen</a>
             </li>
             <li>
               <a href="lihat_tabel_mhs.php">Tabel Mahasiswa</a>
